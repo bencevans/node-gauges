@@ -8,13 +8,13 @@ NodeJS API wrapper for [Guag.es](http://gaug.es).
 * Your Information
 * API Clients
 * Gauges
+* Traffic
 
 <b>Not Implemented</b>
 
 * Sharing
 * Content
 * Referrers
-* Traffic
 * Resolutions
 * Technology
 * Search Terms
@@ -230,6 +230,26 @@ nodeGauges.gauges.delete(gaugeID, callback);
 
 ```javascript
 nodeGauges.gauges.delete('GAUGE_ID', function (err, data) {
+	if(err){
+		console.log('Error: ' + err);
+	} else{
+		console.log(data);
+	}
+});
+```
+
+####Traffic (GET /gauges/:id/traffic)
+
+```javascript
+nodeGauges.traffic(gaugeID, [parameters,] callback);
+```
+
+* gaugeID (string) - Gauge Identifier
+* parameters (object) - Optional -  All Paramaters can be seen on the Gauge.es [API Page](http://get.gaug.es/documentation/reference-listing/traffic/)
+* callback (function) - Returns API Data in the format callback(err, data, responce);
+
+```javascript
+nodeGauges.gauges.traffic('GAUGE_ID', function (err, data) {
 	if(err){
 		console.log('Error: ' + err);
 	} else{
