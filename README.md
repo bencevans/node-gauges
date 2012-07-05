@@ -13,14 +13,15 @@ NodeJS API wrapper for [Guag.es](http://gaug.es).
 * Traffic
 * Resolutions
 * Technology
-
-<b>Not Implemented</b>
-
-* Sharing
-
 * Search Terms
 * Search Engines
 * Locations
+
+<b>Not Implemented</b>
+
+* Sharing <- I Don't have a Gauge.es account that allows sharing, if you wish to use this then either write it yourself and submit a pull request or contact me and I'll implement it for you to test.
+
+
 
 
 #Installation
@@ -331,6 +332,66 @@ nodeGauges.technology(gaugeID, [parameters,] callback);
 
 ```javascript
 nodeGauges.gauges.technology('GAUGE_ID', function (err, data) {
+	if(err){
+		console.log('Error: ' + err);
+	} else{
+		console.log(data);
+	}
+});
+```
+
+####Search Terms (GET /gauges/:id/terms)
+
+```javascript
+nodeGauges.terms(gaugeID, [parameters,] callback);
+```
+
+* gaugeID (string) - Gauge Identifier
+* parameters (object) - Optional -  All Paramaters can be seen on the Gauge.es [API Page](http://get.gaug.es/documentation/reference-listing/terms/)
+* callback (function) - Returns API Data in the format callback(err, data, responce);
+
+```javascript
+nodeGauges.gauges.terms('GAUGE_ID', function (err, data) {
+	if(err){
+		console.log('Error: ' + err);
+	} else{
+		console.log(data);
+	}
+});
+```
+
+####Search Engines (GET /gauges/:id/engines)
+
+```javascript
+nodeGauges.engines(gaugeID, [parameters,] callback);
+```
+
+* gaugeID (string) - Gauge Identifier
+* parameters (object) - Optional -  All Paramaters can be seen on the Gauge.es [API Page](http://get.gaug.es/documentation/reference-listing/engines/)
+* callback (function) - Returns API Data in the format callback(err, data, responce);
+
+```javascript
+nodeGauges.gauges.engines('GAUGE_ID', function (err, data) {
+	if(err){
+		console.log('Error: ' + err);
+	} else{
+		console.log(data);
+	}
+});
+```
+
+####Locations (GET /gauges/:id/locations)
+
+```javascript
+nodeGauges.locations(gaugeID, [parameters,] callback);
+```
+
+* gaugeID (string) - Gauge Identifier
+* parameters (object) - Optional -  All Paramaters can be seen on the Gauge.es [API Page](http://get.gaug.es/documentation/reference-listing/locations/)
+* callback (function) - Returns API Data in the format callback(err, data, responce);
+
+```javascript
+nodeGauges.gauges.locations('GAUGE_ID', function (err, data) {
 	if(err){
 		console.log('Error: ' + err);
 	} else{
