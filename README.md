@@ -29,7 +29,7 @@ NodeJS API wrapper for [Guag.es](http://gaug.es).
 
 ####Option 1 - Install From [NPM](http://npmjs.org)
 
-1. Run `npm install nodeGauges` in Terminal.
+1. Run `npm install node-gauges` in Terminal.
 2. Include the code in your app…
 
 ```javascript
