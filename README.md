@@ -33,7 +33,7 @@ NodeJS API wrapper for [Guag.es](http://gaug.es).
 2. Include the code in your app…
 
 ```javascript
-var nodeGauges = require('nodeGauges').createClient('API_KEY');
+var nodeGauges = require('node-gauges').createClient('API_KEY');
 ```
 
 ####Option 2 - Install From Git Repositry
