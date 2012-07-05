@@ -1,0 +1,20 @@
+{
+  "author": "Ben Evans <ben@bensbit.co.uk> (http://bensbit.co.uk)",
+  "name": "nodeGauges",
+  "description": "NodeJS Gaug.es API Implementation",
+  "version": "0.0.1",
+  "homepage": "https://github.com/bencevans/nodeGauges",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bencevans/nodeGauges.git"
+  },
+  "main": "./lib/node-gauges.js",
+  "dependencies": {
+    "request":"2.9.203"
+    },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
