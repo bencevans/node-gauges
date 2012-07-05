@@ -8,14 +8,14 @@ NodeJS API wrapper for [Guag.es](http://gaug.es).
 * Your Information
 * API Clients
 * Gauges
+* Content
 * Referrers
 * Traffic
+* Resolutions
 
 <b>Not Implemented</b>
 
 * Sharing
-* Content
-* Resolutions
 * Technology
 * Search Terms
 * Search Engines
@@ -238,6 +238,26 @@ nodeGauges.gauges.delete('GAUGE_ID', function (err, data) {
 });
 ```
 
+####Content (GET /gauges/:id/content)
+
+```javascript
+nodeGauges.content(gaugeID, [parameters,] callback);
+```
+
+* gaugeID (string) - Gauge Identifier
+* parameters (object) - Optional -  All Paramaters can be seen on the Gauge.es [API Page](http://get.gaug.es/documentation/reference-listing/content/)
+* callback (function) - Returns API Data in the format callback(err, data, responce);
+
+```javascript
+nodeGauges.gauges.content('GAUGE_ID', function (err, data) {
+	if(err){
+		console.log('Error: ' + err);
+	} else{
+		console.log(data);
+	}
+});
+```
+
 ####Referrers (GET /gauges/:id/referrers)
 
 ```javascript
@@ -270,6 +290,26 @@ nodeGauges.traffic(gaugeID, [parameters,] callback);
 
 ```javascript
 nodeGauges.gauges.traffic('GAUGE_ID', function (err, data) {
+	if(err){
+		console.log('Error: ' + err);
+	} else{
+		console.log(data);
+	}
+});
+```
+
+####Resolutions (GET /gauges/:id/resolutions)
+
+```javascript
+nodeGauges.resolutions(gaugeID, [parameters,] callback);
+```
+
+* gaugeID (string) - Gauge Identifier
+* parameters (object) - Optional -  All Paramaters can be seen on the Gauge.es [API Page](http://get.gaug.es/documentation/reference-listing/resolutions/)
+* callback (function) - Returns API Data in the format callback(err, data, responce);
+
+```javascript
+nodeGauges.gauges.resolutions('GAUGE_ID', function (err, data) {
 	if(err){
 		console.log('Error: ' + err);
 	} else{
