@@ -12,11 +12,12 @@ NodeJS API wrapper for [Guag.es](http://gaug.es).
 * Referrers
 * Traffic
 * Resolutions
+* Technology
 
 <b>Not Implemented</b>
 
 * Sharing
-* Technology
+
 * Search Terms
 * Search Engines
 * Locations
@@ -310,6 +311,26 @@ nodeGauges.resolutions(gaugeID, [parameters,] callback);
 
 ```javascript
 nodeGauges.gauges.resolutions('GAUGE_ID', function (err, data) {
+	if(err){
+		console.log('Error: ' + err);
+	} else{
+		console.log(data);
+	}
+});
+```
+
+####Technology (GET /gauges/:id/technology)
+
+```javascript
+nodeGauges.technology(gaugeID, [parameters,] callback);
+```
+
+* gaugeID (string) - Gauge Identifier
+* parameters (object) - Optional -  All Paramaters can be seen on the Gauge.es [API Page](http://get.gaug.es/documentation/reference-listing/technology/)
+* callback (function) - Returns API Data in the format callback(err, data, responce);
+
+```javascript
+nodeGauges.gauges.technology('GAUGE_ID', function (err, data) {
 	if(err){
 		console.log('Error: ' + err);
 	} else{
