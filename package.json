@@ -8,7 +8,7 @@
     "type": "git",
     "url": "git://github.com/bencevans/node-gauges.git"
   },
-  "main": "./lib/node-gauges.js",
+  "main": "./lib/nodeGauges.js",
   "dependencies": {
     "request":"2.9.203"
     },
