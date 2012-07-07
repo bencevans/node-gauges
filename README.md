@@ -48,7 +48,7 @@ var nodeGauges = require('/path/to/cloned/repo/lib/nodeGauges.js').createClient(
 #Usage
 
 
-####Get Your Information (GET /me)
+####Get Your Information (GET /me) - [Gaug.es Docs](http://get.gaug.es/documentation/reference-listing/your-information/#get-me)
 
 ```javascript
 nodeGauges.me(callback);
@@ -66,12 +66,12 @@ nodeGauges.me(function (err, data) {
 });
 ```
 
-####Update Your Information (PUT /me)
+####Update Your Information (PUT /me) - [Gaug.es Docs](http://get.gaug.es/documentation/reference-listing/your-information/#update-me)
 
 ```javascript
 nodeGauges.me(parameters, callback);
 ```
-* parameters (object) - All Paramaters can be seen on the Gauge.es [API Page](http://get.gaug.es/documentation/reference-listing/your-information/)
+* parameters (object) - All Paramaters can be seen on the Gauge.es [API Page](http://get.gaug.es/documentation/reference-listing/your-information/#update-me)
 * callback (function) - Returns API Data in the format callback(err, data, responce); 
 
 ```javascript
@@ -86,7 +86,7 @@ nodeGauges.me({
 });
 ```
 
-####API Client List (GET /clients)
+####API Client List (GET /clients) - [Gaug.es Docs](http://get.gaug.es/documentation/reference-listing/clients/#get-clients)
 
 ```javascript
 nodeGauges.clients(callback);
@@ -103,13 +103,13 @@ nodeGauges.clients(function (err, data) {
 });
 ```
 
-####Create an API Client (POST /clients)
+####Create an API Client (POST /clients) - [Gaug.es Docs](http://get.gaug.es/documentation/reference-listing/clients/#create-client)
 
 
 ```javascript
 nodeGauges.clients.create(parameters, callback);
 ```
-* parameters (object) - All Paramaters can be seen on the Gauge.es [API Page](http://get.gaug.es/documentation/reference-listing/gauges/)
+* parameters (object) - All Paramaters can be seen on the Gauge.es [API Page](http://get.gaug.es/documentation/reference-listing/gauges/#create-client)
 * callback (function) - Returns API Data in the format callback(err, data, responce); 
 
 
@@ -124,7 +124,7 @@ nodeGauges.clients.create({
 });
 ```
 
-####Delete an API Client (DELETE /clients/:id)
+####Delete an API Client (DELETE /clients/:id) - [Gaug.es Docs](http://get.gaug.es/documentation/reference-listing/clients/#delete-client)
 
 ```javascript
 nodeGauges.clients.delete(clientID, callback);
@@ -142,7 +142,7 @@ nodeGauges.clients.delete('CLIENT_KEY', function (err, data) {
 });
 ```
 
-####Gauges List (GET /gauges)
+####Gauges List (GET /gauges) - [Gaug.es Docs](http://get.gaug.es/documentation/reference-listing/gauges/#get-gauges)
 
 ```javascript
 nodeGauges.gauges(callback);
@@ -160,12 +160,12 @@ nodeGauges.gauges('GAUGE_ID', function (err, data) {
 });
 ```
 
-####Create a New Gauge (POST /gauges)
+####Create a New Gauge (POST /gauges) - [Gaug.es Docs](http://get.gaug.es/documentation/reference-listing/gauges/#create-gauge)
 
 ```javascript
 nodeGauges.gauges.create(parameters, callback);
 ```
-* parameters (object) - All Paramaters can be seen on the Gauge.es [API Page](http://get.gaug.es/documentation/reference-listing/gauges/)
+* parameters (object) - All Paramaters can be seen on the Gauge.es [API Page](http://get.gaug.es/documentation/reference-listing/gauges/#create-gauge)
 * callback (function) - Returns API Data in the format callback(err, data, responce); 
 
 ```javascript
@@ -181,7 +181,7 @@ nodeGauges.gauges.create({
 });
 ```
 
-####Gauge Details (GET /gauges/:id)
+####Gauge Details (GET /gauges/:id) - [Gaug.es Docs](http://get.gaug.es/documentation/reference-listing/gauges/#get-gauge)
 
 ```javascript
 nodeGauges.gauges(gaugeID, callback);
@@ -200,7 +200,7 @@ nodeGauges.gauges('GAUGE_ID', function (err, data) {
 });
 ```
 
-####Update a Gauge (PUT /gauges/:id)
+####Update a Gauge (PUT /gauges/:id) - [Gaug.es Docs](http://get.gaug.es/documentation/reference-listing/gauges/#update-gauges)
 
 ```javascript
 nodeGauges.gauges.update(gaugeID, callback);
@@ -220,7 +220,7 @@ nodeGauges.gauges.update('GAUGE_ID', function (err, data) {
 ```
 
 
-####Delete a Gauge (DELETE /gauges/:id)
+####Delete a Gauge (DELETE /gauges/:id) - [Gaug.es Docs](http://get.gaug.es/documentation/reference-listing/gauges/#delete-gauges)
 
 
 ```javascript
@@ -240,14 +240,14 @@ nodeGauges.gauges.delete('GAUGE_ID', function (err, data) {
 });
 ```
 
-####Content (GET /gauges/:id/content)
+####Content (GET /gauges/:id/content) - [Gaug.es Docs](http://get.gaug.es/documentation/reference-listing/content/#content)
 
 ```javascript
 nodeGauges.content(gaugeID, [parameters,] callback);
 ```
 
 * gaugeID (string) - Gauge Identifier
-* parameters (object) - Optional -  All Paramaters can be seen on the Gauge.es [API Page](http://get.gaug.es/documentation/reference-listing/content/)
+* parameters (object) - Optional -  All Paramaters can be seen on the Gauge.es [API Page](http://get.gaug.es/documentation/reference-listing/content/#content)
 * callback (function) - Returns API Data in the format callback(err, data, responce);
 
 ```javascript
@@ -260,14 +260,14 @@ nodeGauges.gauges.content('GAUGE_ID', function (err, data) {
 });
 ```
 
-####Referrers (GET /gauges/:id/referrers)
+####Referrers (GET /gauges/:id/referrers) - [Gaug.es Docs](http://get.gaug.es/documentation/reference-listing/referrers/#referrers)
 
 ```javascript
 nodeGauges.referrers(gaugeID, [parameters,] callback);
 ```
 
 * gaugeID (string) - Gauge Identifier
-* parameters (object) - Optional -  All Paramaters can be seen on the Gauge.es [API Page](http://get.gaug.es/documentation/reference-listing/referrers/)
+* parameters (object) - Optional -  All Paramaters can be seen on the Gauge.es [API Page](http://get.gaug.es/documentation/reference-listing/referrers/#referrers)
 * callback (function) - Returns API Data in the format callback(err, data, responce);
 
 ```javascript
@@ -280,14 +280,14 @@ nodeGauges.gauges.referrers('GAUGE_ID', function (err, data) {
 });
 ```
 
-####Traffic (GET /gauges/:id/traffic)
+####Traffic (GET /gauges/:id/traffic) - [Gaug.es Docs](http://get.gaug.es/documentation/reference-listing/traffic/#traffic)
 
 ```javascript
 nodeGauges.traffic(gaugeID, [parameters,] callback);
 ```
 
 * gaugeID (string) - Gauge Identifier
-* parameters (object) - Optional -  All Paramaters can be seen on the Gauge.es [API Page](http://get.gaug.es/documentation/reference-listing/traffic/)
+* parameters (object) - Optional -  All Paramaters can be seen on the Gauge.es [API Page](http://get.gaug.es/documentation/reference-listing/traffic/#traffic)
 * callback (function) - Returns API Data in the format callback(err, data, responce);
 
 ```javascript
@@ -300,14 +300,14 @@ nodeGauges.gauges.traffic('GAUGE_ID', function (err, data) {
 });
 ```
 
-####Resolutions (GET /gauges/:id/resolutions)
+####Resolutions (GET /gauges/:id/resolutions) - [Gaug.es Docs](http://get.gaug.es/documentation/reference-listing/resolutions/#resolutions)
 
 ```javascript
 nodeGauges.resolutions(gaugeID, [parameters,] callback);
 ```
 
 * gaugeID (string) - Gauge Identifier
-* parameters (object) - Optional -  All Paramaters can be seen on the Gauge.es [API Page](http://get.gaug.es/documentation/reference-listing/resolutions/)
+* parameters (object) - Optional -  All Paramaters can be seen on the Gauge.es [API Page](http://get.gaug.es/documentation/reference-listing/resolutions/#resolutions)
 * callback (function) - Returns API Data in the format callback(err, data, responce);
 
 ```javascript
@@ -320,14 +320,14 @@ nodeGauges.gauges.resolutions('GAUGE_ID', function (err, data) {
 });
 ```
 
-####Technology (GET /gauges/:id/technology)
+####Technology (GET /gauges/:id/technology) - [Gaug.es Docs](http://get.gaug.es/documentation/reference-listing/technology/#technology)
 
 ```javascript
 nodeGauges.technology(gaugeID, [parameters,] callback);
 ```
 
 * gaugeID (string) - Gauge Identifier
-* parameters (object) - Optional -  All Paramaters can be seen on the Gauge.es [API Page](http://get.gaug.es/documentation/reference-listing/technology/)
+* parameters (object) - Optional -  All Paramaters can be seen on the Gauge.es [API Page](http://get.gaug.es/documentation/reference-listing/technology/#technology)
 * callback (function) - Returns API Data in the format callback(err, data, responce);
 
 ```javascript
@@ -340,14 +340,14 @@ nodeGauges.gauges.technology('GAUGE_ID', function (err, data) {
 });
 ```
 
-####Search Terms (GET /gauges/:id/terms)
+####Search Terms (GET /gauges/:id/terms) - [Gaug.es Docs](http://get.gaug.es/documentation/reference-listing/terms/#search-terms)
 
 ```javascript
 nodeGauges.terms(gaugeID, [parameters,] callback);
 ```
 
 * gaugeID (string) - Gauge Identifier
-* parameters (object) - Optional -  All Paramaters can be seen on the Gauge.es [API Page](http://get.gaug.es/documentation/reference-listing/terms/)
+* parameters (object) - Optional -  All Paramaters can be seen on the Gauge.es [API Page](http://get.gaug.es/documentation/reference-listing/terms/#search-terms)
 * callback (function) - Returns API Data in the format callback(err, data, responce);
 
 ```javascript
@@ -360,14 +360,14 @@ nodeGauges.gauges.terms('GAUGE_ID', function (err, data) {
 });
 ```
 
-####Search Engines (GET /gauges/:id/engines)
+####Search Engines (GET /gauges/:id/engines) - [Gaug.es Docs](http://get.gaug.es/documentation/reference-listing/search-engines/#engines)
 
 ```javascript
 nodeGauges.engines(gaugeID, [parameters,] callback);
 ```
 
 * gaugeID (string) - Gauge Identifier
-* parameters (object) - Optional -  All Paramaters can be seen on the Gauge.es [API Page](http://get.gaug.es/documentation/reference-listing/engines/)
+* parameters (object) - Optional -  All Paramaters can be seen on the Gauge.es [API Page](http://get.gaug.es/documentation/reference-listing/search-engines/#engines)
 * callback (function) - Returns API Data in the format callback(err, data, responce);
 
 ```javascript
@@ -380,14 +380,14 @@ nodeGauges.gauges.engines('GAUGE_ID', function (err, data) {
 });
 ```
 
-####Locations (GET /gauges/:id/locations)
+####Locations (GET /gauges/:id/locations) - [Gaug.es Docs](http://get.gaug.es/documentation/reference-listing/locations/#locations)
 
 ```javascript
 nodeGauges.locations(gaugeID, [parameters,] callback);
 ```
 
 * gaugeID (string) - Gauge Identifier
-* parameters (object) - Optional -  All Paramaters can be seen on the Gauge.es [API Page](http://get.gaug.es/documentation/reference-listing/locations/)
+* parameters (object) - Optional -  All Paramaters can be seen on the Gauge.es [API Page](http://get.gaug.es/documentation/reference-listing/locations/#locations)
 * callback (function) - Returns API Data in the format callback(err, data, responce);
 
 ```javascript
