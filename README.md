@@ -2,7 +2,7 @@
 
 NodeJS API wrapper for [Guag.es](http://gaug.es).
 
-<b>All API Calls Methods Supported</b>
+<b>All API Methods Supported</b>
 
 * Your Information
 * API Clients
