@@ -2,12 +2,12 @@
 
 NodeJS API wrapper for [Guag.es](http://gaug.es).
 
-#Development Status
+<b>All API Calls Methods Supported</b>
 
-<b>Implemented</b>
 * Your Information
 * API Clients
 * Gauges
+* Sharing
 * Content
 * Referrers
 * Traffic
@@ -16,12 +16,6 @@ NodeJS API wrapper for [Guag.es](http://gaug.es).
 * Search Terms
 * Search Engines
 * Locations
-
-<b>Not Implemented</b>
-
-* Sharing <- I Don't have a Gauge.es account that allows sharing, if you wish to use this then either write it yourself and submit a pull request or contact me and I'll implement it for you to test.
-
-
 
 
 #Installation
@@ -232,6 +226,64 @@ nodeGauges.gauges.delete(gaugeID, callback);
 
 ```javascript
 nodeGauges.gauges.delete('GAUGE_ID', function (err, data) {
+	if(err){
+		console.log('Error: ' + err);
+	} else{
+		console.log(data);
+	}
+});
+```
+####List Shares (GET /gauges/:id/shares) - [Gaug.es Docs](http://get.gaug.es/documentation/reference-listing/sharing/#list-shares)
+
+```javascript
+nodeGauges.sharing(gaugeID, callback);
+```
+
+* gaugeID (string) - Gauge Identifier
+* callback (function) - Returns API Data in the format callback(err, data, responce);
+
+```javascript
+nodeGauges.sharing('GAUGE_ID', function (err, data) {
+	if(err){
+		console.log('Error: ' + err);
+	} else{
+		console.log(data);
+	}
+});
+```
+
+####Share Gauge (POST /gauges/:id/shares) - [Gaug.es Docs](http://get.gaug.es/documentation/reference-listing/sharing/#share-gauge)
+
+```javascript
+nodeGauges.sharing.share(gaugeID, email, callback);
+```
+
+* gaugeID (string) - Gauge Identifier
+* email (string) - Email of the person you wish to share the gauge with
+* callback (function) - Returns API Data in the format callback(err, data, responce);
+
+```javascript
+nodeGauges.sharing.share('GAUGE_ID', 'bob@example.com', function (err, data) {
+	if(err){
+		console.log('Error: ' + err);
+	} else{
+		console.log(data);
+	}
+});
+```
+
+####UnShare Gauge (DELETE /gauges/:id/shares/:user_id) - [Gaug.es Docs](http://get.gaug.es/documentation/reference-listing/sharing/#unshare-gauge)
+
+```javascript
+nodeGauges.sharing.unshare(gaugeID, userID, callback);
+```
+
+* gaugeID (string) - Gauge Identifier
+* userID (string) - This can be found by using the nodeGauges.sharing method.
+* callback (function) - Returns API Data in the format callback(err, data, responce);
+
+```javascript
+nodeGauges.sharing.unshare('GAUGE_ID', 'USERID', function (err, data) {
 	if(err){
 		console.log('Error: ' + err);
 	} else{
