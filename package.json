@@ -10,8 +10,8 @@
   },
   "main": "./lib/nodeGauges.js",
   "dependencies": {
-    "request":"2.9.203"
-    },
+    "request": "~2.33.0"
+  },
   "devDependencies": {},
   "optionalDependencies": {},
   "engines": {
